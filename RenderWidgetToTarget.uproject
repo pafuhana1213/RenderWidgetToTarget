@@ -3,13 +3,6 @@
 	"EngineAssociation": "4.21",
 	"Category": "",
 	"Description": "",
-	"Modules": [
-		{
-			"Name": "RenderWidgetToTarget",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		}
-	],
 	"Plugins": [
 		{
 			"Name": "OculusVR",
