@@ -4,13 +4,12 @@ using UnrealBuildTool;
 
 public class RenderWidgetToTargetPlugin : ModuleRules
 {
-	public RenderWidgetToTargetPlugin(TargetInfo Target)
-	{
-		
-		PublicIncludePaths.AddRange(
-			new string[] {
-				"RenderWidgetToTargetPlugin/Public"
-				
+	public RenderWidgetToTargetPlugin(ReadOnlyTargetRules Target) : base(Target)
+    {
+        PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
+
+        PublicIncludePaths.AddRange(
+			new string[] {				
 				// ... add public include paths required here ...
 			}
 			);
@@ -18,8 +17,6 @@ public class RenderWidgetToTargetPlugin : ModuleRules
 		
 		PrivateIncludePaths.AddRange(
 			new string[] {
-				"RenderWidgetToTargetPlugin/Private",
-				
 				// ... add other private include paths required here ...
 			}
 			);
@@ -43,6 +40,7 @@ public class RenderWidgetToTargetPlugin : ModuleRules
 				"Slate",
 				"SlateCore",
                 "UMG",
+                "RenderCore",
 
 				// ... add private dependencies that you statically link with here ...	
 			}

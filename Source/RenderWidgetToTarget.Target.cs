@@ -5,21 +5,9 @@ using System.Collections.Generic;
 
 public class RenderWidgetToTargetTarget : TargetRules
 {
-	public RenderWidgetToTargetTarget(TargetInfo Target)
-	{
-		Type = TargetType.Game;
-	}
-
-	//
-	// TargetRules interface.
-	//
-
-	public override void SetupBinaries(
-		TargetInfo Target,
-		ref List<UEBuildBinaryConfiguration> OutBuildBinaryConfigurations,
-		ref List<string> OutExtraModuleNames
-		)
-	{
-		OutExtraModuleNames.AddRange( new string[] { "RenderWidgetToTarget" } );
-	}
+    public RenderWidgetToTargetTarget(TargetInfo Target) : base(Target)
+    {
+        Type = TargetType.Game;
+        ExtraModuleNames.Add("RenderWidgetToTarget");
+    }
 }
