@@ -7,8 +7,8 @@
 #include "UMG.h"
 #include "SlateBasics.h"
 #include "SlateCore.h"
-#include "SWidget.h"
-#include "WidgetRenderer.h"
+#include "Widgets/SWidget.h"
+#include "Slate/WidgetRenderer.h"
 
 #include "RenderWidgetToTargetPluginBPLibrary.generated.h"
 
